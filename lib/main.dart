@@ -34,7 +34,7 @@ return Container(
       color: textcolor,
     ),
     ),
-    shape: CircleBorder(),
+
     color: btncolor,
     padding: EdgeInsets.all(20),
   ),
@@ -46,7 +46,7 @@ return Container(
     return Scaffold(
       backgroundColor: Colors.black, 
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 5),
+        padding: EdgeInsets.symmetric(horizontal: 85),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -67,13 +67,13 @@ return Container(
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  calcbtn("AC", Colors.grey, Colors.black),
-                  calcbtn("+/-", Colors.grey, Colors.black),
-                  calcbtn("%", Colors.grey, Colors.black),
+                  calcbtn("C", Colors.grey, Colors.white),
+                  calcbtn("+/-", Colors.grey, Colors.white),
+                  calcbtn("%", Colors.grey, Colors.white),
                   calcbtn("÷", Colors.amber[700], Colors.white),
                 ],
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 2,),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -84,7 +84,7 @@ return Container(
                   calcbtn("x", Colors.amber[700], Colors.white),
                 ],
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 2,),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -95,7 +95,7 @@ return Container(
                   calcbtn("-", Colors.amber[700], Colors.white),
                 ],
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 2,),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -106,7 +106,7 @@ return Container(
                   calcbtn("+", Colors.amber[700], Colors.white),
                 ],
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 2,),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -114,12 +114,12 @@ return Container(
                   //for 0 button 
                   RaisedButton(
                     // padding: EdgeInsets.fromLTRB(34, 20, 128, 20),
-                    padding: EdgeInsets.fromLTRB(34, 20, 158, 20),
+                    padding: EdgeInsets.fromLTRB(34, 20, 125, 20),
                     onPressed: (){
                       //button function here 
                       calculate('0');
                     },
-                    shape: StadiumBorder(),
+
                     child: Text("0", 
                     style: TextStyle(
                       fontSize: 35, 
@@ -132,7 +132,7 @@ return Container(
                   calcbtn("=", Colors.amber[700], Colors.white),
                 ],
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 2,),
           ],
         ),
       ),
@@ -148,7 +148,7 @@ return Container(
   dynamic preOpr = '';
 
   void calculate(btntext){
-    if(btntext == "AC"){
+    if(btntext == "C"){
       text = '0';
       first = 0;
       second = 0;
